@@ -67,7 +67,7 @@ Two CSV files are required as input (same format as used in the paper):
 
 ```
 Exp_ID,Date,LCI,NDRE,NDVI,OSAVI,GNDVI,CI_green,CI_red_edge,WDRVI,EVI2,DVI,RVI,EVI,MCARI
-L1,2024/7/2,0.115241,0.096902,0.511925,0.245880,0.431566,1.604300,0.259938,-0.521723,0.127061,0.058834,3.166945,0.126175,0.110762
+C1,2024/7/2,0.115241,0.096902,0.511925,0.245880,0.431566,1.604300,0.259938,-0.521723,0.127061,0.058834,3.166945,0.126175,0.110762
 ...
 ```
 
@@ -79,7 +79,7 @@ L1,2024/7/2,0.115241,0.096902,0.511925,0.245880,0.431566,1.604300,0.259938,-0.52
 
 ```
 Exp_ID,Yield
-L1,460.346337
+C1,460.346337
 ...
 ```
 
@@ -116,12 +116,6 @@ Outputs are written to `runs/train/<name>/`: `best.pth` (highest test R²),
 `last.pth`, `config.json`, `result.csv` (per-epoch metrics), `predictions.csv`,
 `training_curves.png`.
 
-> **Note on overfitting**: with small datasets (a few hundred plots), the best
-> test R² is typically reached before the final epoch; use `best.pth` for
-> evaluation/reporting. Reducing `--lr` to 5e-4–7e-4 usually improves the peak
-> test R².
-
----
 
 ## 6. Prediction / Metrics
 
@@ -148,6 +142,4 @@ Released for reproducibility; please cite the manuscript if you use this code.
 
 ## 8. Citation
 
-```
-[to be updated after acceptance]
-```
+
